@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>POC Media Query</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+    <header class="header-fixo">
+        <nav class="menu">
+            <ul>
+                <li><a href="#definicao">O que é</a></li>
+                <li><a href="#aplicacoes">Aplicações</a></li>
+                <li><a href="#como_usar">Como Usar</a></li>
+                <li><a href="#como_testar">Como Testar</a></li>
+                <li><a href="#exemplos">Exemplos</a></li>
+                <li><a href="#referencias">Referências</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/arturstaation/POC_MediaQuery" class="repo-link">Repositório</a>
+        <p class="autores">
+            <strong>Feito Por:</strong><br>Artur Valladares<br>Gabriel Marques
+        </p>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="banner">
+            <h1>Media Queries e Aplicações</h1>
+            <h6>*Esse site responde a alterações de largura para simular o uso de Media Queries, para melhores testes
+                simule alterações de largura (tutorial em <a href="#como_testar">Como Testar Media Queries?</a>)</h6>
+        </section>
+
+        <section id="definicao" class="secao">
+            <h2>O que é Media Query?</h2>
+            <p>Media Queries são uma funcionalidade do CSS usada para aplicar estilos de maneira condicional, com base
+                nas características do dispositivo ou viewport, como largura, altura, resolução, orientação e até mesmo
+                as capacidades do dispositivo. Elas permitem criar sites responsivos, adaptando a apresentação do
+                conteúdo conforme diferentes telas e dispositivos, oferecendo uma melhor experiência de usuário em
+                desktops, tablets e smartphones.</p>
+        </section>
+
+        <section id="aplicacoes" class="secao">
+            <h2>Quando usar Media Queries?</h2>
+            <p>Media Queries devem ser usadas quando você deseja adaptar o layout e o design do seu site para diferentes
+                dispositivos e tamanhos de tela. Elas são essenciais em projetos de web design responsivo, garantindo
+                que o conteúdo seja visualizado de forma adequada em qualquer ambiente, como telas de smartphones,
+                tablets ou desktops. Além disso, podem ser aplicadas para ajustar a interface com base na orientação do
+                dispositivo (retrato ou paisagem) ou em cenários específicos, como dispositivos com resoluções maiores
+                ou menores, ou até mesmo na tela de impressão.</p>
+        </section>
+
+        <section id="como_usar" class="secao">
+            <h2>Como usar Media Queries?</h2>
+            <p>Para usar Media Queries em CSS, você precisa definir condições baseadas nas características do
+                dispositivo, como a largura da tela, e aplicar estilos específicos para essas condições. O exemplo
+                abaixo demonstra como ajustar o layout de uma página conforme a largura da tela.</p>
+
+            <h3>Exemplo:</h3>
+            <pre><code>
+                /* Estilos para dispositivos com largura de tela até 600px */
+                @media (max-width: 600px) {
+                    body {
+                        background-color: lightblue;
+                    }
+                    .container {
+                        flex-direction: column;
+                    }
+                }
+
+                /* Estilos para dispositivos com largura de tela maior que 600px */
+                @media (min-width: 601px) {
+                    body {
+                        background-color: white;
+                    }
+                    .container {
+                        flex-direction: row;
+                    }
+                }
+            </code></pre>
+            <p>Neste exemplo, o fundo da página muda para azul claro quando a largura da tela é inferior a 600px, e a
+                disposição dos elementos dentro de <code>.container</code> se altera de coluna para linha dependendo da
+                largura da tela. Isso permite que o site se adapte automaticamente a diferentes dispositivos, como
+                smartphones e desktops.</p>
+        </section>
+
+        <section id="como_testar" class="secao">
+            <h2>Como Testar Media Queries?</h2>
+            <p>1.Clique com o botão direito em qualquer parte da página e selecione "Inspecionar" ou use o atalho Ctrl +
+                Shift + I (Windows) ou Cmd + Option + I (Mac).</p>
+            <p>2.Na janela de Ferramentas do Desenvolvedor, clique no ícone de dispositivo móvel (Imagem1) ou use o
+                atalho Ctrl + Shift + M (Windows) ou Cmd + Shift + M (Mac).</p>
+            <img src="./images/imagem_pocmq_1.png" alt="Onde encontrar o botão descrito no passo 2">
+            <h6>Imagem 1</h6>
+            <p>3.No topo da janela, você verá um menu para escolher diferentes dispositivos ou inserir larguras de tela
+                personalizadas (Imagem 2) ou alterar nas 3 barrinhas (Imagem 3).</p>
+            <img src="images/imagem_pocmq_6.png" alt="Onde encontrar o menu descrito no passo 3">
+            <h6>Imagem 2</h6>
+            <br>
+            <img id="imagem_grande" src="images/imagem_pocmq_5.png"
+                alt="Onde encontrar as 3 barrinhas descritas no passo 3">
+            <h6>Imagem 3</h6>
+            <p>4.Alterne entre diferentes tamanhos de tela para testar como as Media Queries respondem.</p>
+
+            <h2>Bonus</h2>
+            <h3>Como testar diferentes dispositivos</h3>
+            <p>1.Clique com o botão direito em qualquer parte da página e selecione "Inspecionar" ou use o atalho Ctrl +
+                Shift + I (Windows) ou Cmd + Option + I (Mac).</p>
+            <p>2.Na janela de Ferramentas do Desenvolvedor, clique no ícone de dispositivo móvel (Imagem1) ou use o
+                atalho Ctrl + Shift + M (Windows) ou Cmd + Shift + M (Mac).</p>
+            <p>3. No topo do painel, você poderá selecionar diferentes dispositivos predefinidos ou personalizar a
+                largura e a altura do viewport manualmente (Imagem 4).</p>
+            <img src="images/imagem_pocmq_2.png" alt="Menu de Selecionar diferentes dispositivos descrito no passo 3">
+            <h6>Imagem 4</h6>
+            <p>4. Selecione dispositivos como smartphones, tablets e desktops (Imagem 5) para verificar como o layout
+                responde às
+                diferentes larguras de tela.</p>
+            <img src="images/imagem_pocmq_3.png" alt="Selecionar diferentes dispositivos descrito no passo 4">
+            <h6>Imagem 5</h6>
+
+            <h3>Como testar diferentes orientações</h3>
+            <p>1. Com as Ferramentas do Desenvolvedor abertas e o modo de dispositivos móveis ativado (topico anterior),
+                localize o ícone
+                de alternância de orientação (Imagem 6).</p>
+            <img src="images/imagem_pocmq_4.png">
+            <h6>Imagem 6</h6>
+            <p>2. Clique neste ícone para alternar entre as orientações "retrato" e "paisagem". Isso simulará a rotação
+                do dispositivo, permitindo que você veja como o layout da página se adapta.</p>
+        </section>
+
+        <section id="exemplos" class="secao">
+            <h2>Exemplos de Uso de Media Queries</h2>
+
+            <h3>Exemplo 1: Mudança de Largura</h3>
+            <p>Se você mudar a largura da tela para menos de 600px, o conteúdo do Flexbox será reordenado mostrado em
+                coluna. Para larguras maiores que 100px, a ordem original será
+                restaurada e mostrada em linha.</p>
+            <p><strong>Importância:</strong> Essa técnica é fundamental para garantir que os usuários tenham uma
+                experiência de navegação otimizada em diferentes dispositivos. Quando o layout se adapta a diferentes
+                larguras, o conteúdo se torna mais legível e acessível, evitando a necessidade de zoom ou rolagem
+                excessiva. Além disso, ao reordenar os elementos, você pode priorizar informações mais relevantes para
+                telas menores, melhorando a usabilidade e a eficiência da interação do usuário.</p>
+
+            <div class="exemplo_1">
+                <div class="box" id="box1">Box 1</div>
+                <div class="box" id="box2">Box 2</div>
+                <div class="box" id="box3">Box 3</div>
+            </div>
+
+            <h4>Resultados:</h4>
+            <h5>Dispositivos com mais de 1000px de largura:</h5>
+            <img src="images/imagem_pocmq_8.png" alt="Resultado para dispostivos com largura maior que 1000px">
+            <h5>Dispositivos com menos de 1000px de largura:</h5>
+            <img src="images/imagem_pocmq_9.png" alt="Resultado para dispostivos com largura maior que 1000px">
+
+            <h3>Exemplo 2: Mudança de Orientação</h3>
+            <p>Este exemplo demonstra como o layout muda quando a orientação do dispositivo muda de retrato para
+                paisagem. No modo retrato, uma coluna de navegação será exibida ao lado de uma galeria de ícones
+                representando os tópicos. Quando a orientação muda para paisagem, o menu se transforma em um cabeçalho
+                horizontal e os ícones serão dispostos em uma grade, permitindo uma visualização mais ampla e eficiente.
+            </p>
+            <p><strong>Importância:</strong>A capacidade de um layout se adaptar à mudança de orientação é fundamental
+                na experiência do usuário em
+                dispositivos móveis. A mudança de orientação, seja de retrato para paisagem ou vice-versa, pode impactar
+                significativamente como o conteúdo é apresentado. Layouts responsivos que se ajustam automaticamente
+                garantem que os usuários tenham uma visualização otimizada, independentemente da orientação do
+                dispositivo. Isso melhora a usabilidade, permitindo que os usuários acessem as informações de maneira
+                mais eficiente e intuitiva.</p>
+
+            <div class="container">
+                <nav class="menu_exemplo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Galeria</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="galeria">
+                    <div><i class="fas fa-home emoji"></i></div>
+                    <div><i class="fas fa-image emoji"></i></div>
+                    <div><i class="fas fa-info-circle emoji"></i></div>
+                    <div><i class="fas fa-envelope emoji"></i></div>
+
+                </div>
+            </div>
+
+            <h4>Resultados:</h4>
+            <h5>Dispositivos no modo paisagem:</h5>
+            <img src="images/imagem_pocmq_10.png" alt="Resultado obtido no modo paisagem">
+            <h5>Dispositivos no modo retrato:</h5>
+            <img src="images/imagem_pocmq_11.png" alt="Resultado obtido no modo retrato">
+
+            <p id="orientation-message"></p>
+
+            <h3>Exemplo 3: Estilos para Impressão</h3>
+            <p>Ao tentar imprimir esta página, o header será oculto automaticamente para otimizar o conteúdo impresso.
+            </p>
+            <p><strong>Importância:</strong>Isso pode ser útil para remover elementos visuais não necessários na
+                impressão.</p>
+            <h4>Resultado:</h4>
+            <img src="images/imagem_pocmq_7.png" alt="Resultado ao tentar imprimir o site">
+
+        </section>
+
+        <section id="referencias" class="secao">
+            <h2>Referências</h2>
+
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries">Usando
+                        Media Queries - Mozilla</a>
+                </li>
+                <li><a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">Responsive Web Design - Media
+                        Queries -
+                        W3Schools</a></li>
+            </ul>
+
+        </section>
+    </main>
+</body>
+
+</html>

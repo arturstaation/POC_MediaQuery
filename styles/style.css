@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    padding-left: 220px;
+
+}
+
+
+.header-fixo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-bottom: 20px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    color: #ff6347;
+}
+
+.repo-link {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 30px;
+    display: block;
+}
+
+.repo-link:hover {
+    color: #ff6347;
+}
+
+.autores strong {
+    font-size: 18px
+}
+
+.autores {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.conteudo-principal {
+    padding: 20px;
+    margin: 20px;
+}
+
+.banner {
+    background-color: #ff6347;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.banner h1 {
+    margin-bottom: 10px;
+}
+
+.banner h6 {
+    font-size: 14px;
+}
+
+.secao {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.secao h2 {
+    margin-bottom: 10px;
+}
+
+.secao a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.secao a:hover {
+    text-decoration: underline;
+}
+
+#imagem_grande {
+    width: 800px;
+    height: auto;
+}
+
+#referencias ul {
+    list-style: none;
+}
+
+.exemplo_1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    padding: 20px;
+    background-color: lightgray;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+
+
+@media print {
+
+
+
+    .header-fixo,
+    .menu,
+    .repo-link,
+    .autores {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+        width: 100%;
+        padding-left: 0;
+
+
+    }
+}
+
+@media (max-width: 1000px) {
+    .exemplo_1 {
+        flex-direction: column;
+    }
+
+    #box1 {
+        order: 3;
+    }
+
+    #box2 {
+        order: 1;
+    }
+
+    #box3 {
+        order: 2;
+    }
+
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.menu_exemplo {
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu_exemplo ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu_exemplo li {
+    margin: 10px 0;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.emoji {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+@media (orientation: landscape) {
+    .container {
+        flex-direction: row;
+    }
+
+    .menu_exemplo {
+        width: 200px;
+        height: 100%;
+    }
+
+    .galeria {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .emoji {
+        margin-left: 100px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
+
+#exemplos img {
+    border-style: dotted;
+    border-radius: 10px;
+    color: black;
+}
