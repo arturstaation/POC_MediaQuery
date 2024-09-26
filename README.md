@@ -12,7 +12,7 @@ Para acessar o site proposto por esta prova de conceito (POC), você tem duas op
 ### Opção 1: Acesso Online
 
 Você pode visualizar o projeto diretamente no navegador acessando o seguinte link:
-[**https://github.com/arturstaation/POC_MediaQuery**](https://github.com/arturstaation/POC_MediaQuery)
+[**https://arturstaation.github.io/POC_MediaQuery/**](https://arturstaation.github.io/POC_MediaQuery/)
 
 ### Opção 2: Acesso Local
 
@@ -156,12 +156,6 @@ Se você mudar a largura da tela para menos de 600px, o conteúdo do Flexbox ser
 
 **Importância:** Essa técnica é fundamental para garantir que os usuários tenham uma experiência de navegação otimizada em diferentes dispositivos. Quando o layout se adapta a diferentes larguras, o conteúdo se torna mais legível e acessível, evitando a necessidade de zoom ou rolagem excessiva. Além disso, ao reordenar os elementos, você pode priorizar informações mais relevantes para telas menores, melhorando a usabilidade e a eficiência da interação do usuário.
 
-<div class="exemplo_1">
-    <div class="box" id="box1">Box 1</div>
-    <div class="box" id="box2">Box 2</div>
-    <div class="box" id="box3">Box 3</div>
-</div>
-
 #### Resultados:
 ##### Dispositivos com mais de 1000px de largura:
 ![Resultado para dispositivos com largura maior que 1000px](images/imagem_pocmq_8.png)
@@ -173,23 +167,6 @@ Se você mudar a largura da tela para menos de 600px, o conteúdo do Flexbox ser
 Este exemplo demonstra como o layout muda quando a orientação do dispositivo muda de retrato para paisagem. No modo retrato, uma coluna de navegação será exibida ao lado de uma galeria de ícones representando os tópicos. Quando a orientação muda para paisagem, o menu se transforma em um cabeçalho horizontal e os ícones serão dispostos em uma grade, permitindo uma visualização mais ampla e eficiente.
 
 **Importância:** A capacidade de um layout se adaptar à mudança de orientação é fundamental na experiência do usuário em dispositivos móveis. A mudança de orientação, seja de retrato para paisagem ou vice-versa, pode impactar significativamente como o conteúdo é apresentado. Layouts responsivos que se ajustam automaticamente garantem que os usuários tenham uma visualização otimizada, independentemente da orientação do dispositivo. Isso melhora a usabilidade, permitindo que os usuários acessem as informações de maneira mais eficiente e intuitiva.
-
-<div class="container">
-    <nav class="menu_exemplo">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
-    </nav>
-    <div class="galeria">
-        <div><i class="fas fa-home emoji"></i></div>
-        <div><i class="fas fa-image emoji"></i></div>
-        <div><i class="fas fa-info-circle emoji"></i></div>
-        <div><i class="fas fa-envelope emoji"></i></div>
-    </div>
-</div>
 
 #### Resultados:
 ##### Dispositivos no modo paisagem:
